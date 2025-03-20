@@ -1,4 +1,4 @@
-# Analisis del rendimiento de los proyectos
+# Análisis del rendimiento de los proyectos
 Desarrollo de un proyecto en Power BI que incluye la creación de una base de datos en Microsoft SQL Server Management Studio para almacenar la información de la empresa y explorarla mediante consultas. Posteriormente, se conecta la base de datos con Power BI para transformar los datos y elaborar un panel de control interactivo. A través del análisis de la información, se obtienen resultados y conclusiones sobre posibles riesgos financieros, además de sugerencias para optimizar la gestión.
 
 ![image](https://github.com/user-attachments/assets/bc7bf40a-3f03-4503-8fac-36af3d6a60d7)
