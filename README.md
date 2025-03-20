@@ -73,8 +73,21 @@ JOIN project_status ON project_assignments.project_id = project_status.project_i
 
 ### Conexión con PowerBI
 
+Mediante la opción SQL Server, conectamos PowerBI con la BBDD y usando las opciones avanzadas añadimos la consulta previamente creada para empezar con una tabla con únicamente los datos necesarios para empezar a transformarlos.
+
+![image](https://github.com/user-attachments/assets/34fc09f4-5011-4c2b-8579-4d43d732cdc9)
+
 
 ### Tranformación de datos en PowerBI
+
+Para asegurar datos de calidad, seguiremos una estandarización de nombres y se transformarán los tipos de las variables que estén mal formateadas. Aquellas columnas que venían de la tabla departments, se cambian sus nombres a todo en minúsculas.
+
+Además, el salario, el presupuesto de departamento y de proyecto se cambian al tipo número decimal fijo (para simbolizar el dinero). El ID de empleado se cambia a número entero.
+
+Por último, se crea una nueva consulta referencia desde la consulta inicial. Queremos crear una tabla donde se calcule el rendimiento (capital) por objetivo de departamento. Para ello, agrupamos por departamento y objetivo, manteniendo la información pertinente que sería presupuesto_departamento, coste_salario y coste_proyecto. Estos valores son necesarios para calcular el rendimiento por año. 
+
+![image](https://github.com/user-attachments/assets/01e0596c-40b3-4412-85e3-656b5cc68441)
+
 
 ## Fase de análisis
 
