@@ -71,5 +71,12 @@ JOIN project_assignments ON employees.employee_id = project_assignments.employee
 JOIN project_status ON project_assignments.project_id = project_status.project_id;
 ```
 
+### Conexión con PowerBI
+
+
+### Tranformación de datos en PowerBI
+
+## Fase de análisis
+
 
 
