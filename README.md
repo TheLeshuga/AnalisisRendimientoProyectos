@@ -37,7 +37,8 @@ FROM employees;
 Como cada empleado está en un departamento, podemos adjuntarle en cuál trabajan usando la tabla de departamentos para añadir más información sobre cada uno:
 
 ```sql
-SELECT employees.employee_id, employees.first_name, employees.last_name, employees.job_title, employees.salary, departments.Department_Name, departments.Department_Budget, departments.Department_Goals
+SELECT employees.employee_id, employees.first_name, employees.last_name, employees.job_title,
+employees.salary, departments.Department_Name, departments.Department_Budget, departments.Department_Goals
 FROM employees
 JOIN departments ON employees.department_id = departments.Department_ID;
 ```
@@ -45,7 +46,9 @@ JOIN departments ON employees.department_id = departments.Department_ID;
 Buscando adjuntar los proyectos a cada departamento, podemos hacerlo mediante la tabla project_assignments, ya que, tiene el ID del empleado y del proyecto:
 
 ```sql
-SELECT employees.employee_id, employees.first_name, employees.last_name, employees.job_title, employees.salary, departments.Department_Name, departments.Department_Budget, departments.Department_Goals, project_assignments.project_id
+SELECT employees.employee_id, employees.first_name, employees.last_name,
+employees.job_title, employees.salary, departments.Department_Name, departments.Department_Budget,
+departments.Department_Goals, project_assignments.project_id
 FROM employees
 JOIN departments ON employees.department_id = departments.Department_ID
 JOIN project_assignments ON employees.employee_id = project_assignments.employee_id;
@@ -65,8 +68,9 @@ FROM completed_projects)
 Nuestra consulta final contendrá también el estado de cada proyecto con su nombre y presupuesto, información pertinente sobre los proyectos necesarios para el análisis. Esta consulta será usada en PowerBI a la hora de transportar los datos de la BBDD a el programa:
 
 ```sql
-SELECT employees.employee_id, employees.first_name, employees.last_name, employees.job_title, employees.salary, 
-departments.Department_Name, departments.Department_Budget, departments.Department_Goals, project_assignments.project_id, project_status.project_name, project_status.project_budget, project_status.status
+SELECT employees.employee_id, employees.first_name, employees.last_name, employees.job_title,
+employees.salary, departments.Department_Name, departments.Department_Budget, departments.Department_Goals,
+project_assignments.project_id, project_status.project_name, project_status.project_budget, project_status.status
 FROM employees
 JOIN departments ON employees.department_id = departments.Department_ID
 JOIN project_assignments ON employees.employee_id = project_assignments.employee_id
@@ -92,6 +96,28 @@ Además, el salario, el presupuesto de departamento y de proyecto se cambian al 
 Por último, se crea una nueva consulta referencia desde la consulta inicial. Queremos crear una tabla donde se calcule el rendimiento (capital) por objetivo de departamento. Para ello, agrupamos por departamento y objetivo, manteniendo la información pertinente que sería presupuesto_departamento, coste_salario y coste_proyecto. Estos valores son necesarios para calcular el rendimiento por año. 
 
 ![image](https://github.com/user-attachments/assets/01e0596c-40b3-4412-85e3-656b5cc68441)
+
+Se añade una columna calculada llamada capital para medir el rendimiento.
+
+Cada departamento cuenta con un objetivo y un presupuesto destinado a subvencionar sus proyectos. Sin embargo, pueden existir varios proyectos enfocados en el mismo objetivo, y cada uno de ellos tiene un presupuesto o coste distinto.
+
+El rendimiento anual se calculará como la mitad del presupuesto total del departamento (ya que este se asigna para un período de dos años), menos la suma de los salarios de los empleados del departamento y el presupuesto asignado a sus proyectos.
+```
+[department_budget]*0.5 - ([salary_cost] + [project_cost])
+```
+
+Se cambia el tipo a número decimal fijo de todas las columnas menos la de department_name y department_goals. La última columna necesaria para esta consulta será 1-year_budget, que es la mitad del presupuesto.
+
+![image](https://github.com/user-attachments/assets/340c7345-e716-430e-b8fc-0783d74c35b5)
+
+
+### Creación del dashboard
+
+Tras la limpieza final de datos y la consulta nueva, se crea un dashboard usando elementos como gráficos de barras, tarjetas, gráfico de anillos y segmentadores. Se visualiza toda la información recogida en el documento de los requerimientos funcionales. [Ver documento](https://github.com/TheLeshuga/AnalisisRendimientoProyectos/blob/main/requerimientos_proyecto.pdf).
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/67f0eee3-da35-4957-87cd-f5b4abeef14e" width="600">
+</p>
 
 
 ## Fase de análisis
