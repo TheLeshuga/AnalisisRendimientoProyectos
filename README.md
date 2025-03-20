@@ -122,5 +122,48 @@ Tras la limpieza final de datos y la consulta nueva, se crea un dashboard usando
 
 ## Fase de análisis
 
+### Primer insight 
+
+Estudiando los valores de la tabla de cálculo de rendimiento, observamos que ninguno de los proyectos tiene el capital en rojo. Eso significa que tienen suficiente presupuesto (de un año) como para cubrir todos los proyectos. Destacamos que los proyectos del departamento Engineering, el cual solo tiene 2 proyectos, es el que más presupuesto sobrante tiene mientras que el de Human Resources, con 2 proyectos, es el que más cerca se quedó de gastar todo el presupuesto anual.
+
+Al analizar la fila de totales, se observa que, de los 3.450.000 € asignados anualmente, 2.084.000 € quedarían sin utilizar, lo que representa un 60,41 % del presupuesto total destinado a los departamentos. Este excedente indica que, aunque no hay riesgo de pérdidas por costes elevados, una gran parte de los fondos asignados no se está aprovechando de manera óptima.
+
+Además, los sueldos anuales representan solo un 23,07 % del presupuesto total, lo que sugiere una oportunidad para revalorizar a los empleados. Se podrían implementar bonificaciones o aumentos salariales para incentivar y motivar al equipo. Otra alternativa sería reequilibrar la contratación, ya sea incorporando nuevos empleados para acelerar el desarrollo de proyectos existentes o para iniciar nuevos proyectos que optimicen el uso del presupuesto disponible.
+
+![image](https://github.com/user-attachments/assets/d161ffa1-6664-4b41-8094-eef9e5226047)
+
+
+### Segundo insight
+
+El departamento con el mayor presupuesto destinado a proyectos es Sales, que cuenta con dos proyectos. Además, es el departamento con el mayor coste anual en salarios, con dos empleados. A pesar de ello, ha inutilizado el 47,17 % de su presupuesto anual.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/14b4c29c-592b-409b-bf29-3e01860f55e5" width="700">
+</p>
+
+Por otro lado, el departamento que ha utilizado el menor presupuesto en proyectos es IT, también con dos proyectos y dos empleados. Aun así, su porcentaje de presupuesto no utilizado es 46,44 %, lo que indica una situación similar a la de Sales en términos de eficiencia en el uso de fondos. 
+
+Con este resultado podríamos decir que el presupuesto total otorgado a cada departamento no parece estar determinado ni por el número de empleados ni por un criterio basado en proyectos de mayor coste. Un dato que refuerza esta observación es que el departamento de Engineering recibió un presupuesto anual de 1.200.000 €, a pesar de que el coste de sus proyectos ocupa el tercer lugar entre los departamentos con mayor inversión en proyectos. Esto indica que la distribución del presupuesto no sigue un patrón estrictamente basado en el gasto en proyectos ni salarios. Por lo tanto, una acción recomendable sería ajustar el presupuesto en función de las variables de salarios y los proyectos futuros. De esta manera, podremos asignar los presupuestos de forma más estratégica, garantizando que cada departamento reciba los fondos necesarios para sus actividades, sin exceder la inversión disponible para otras áreas de la empresa.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e4289e8f-c2bf-4098-b560-b8a9a41702b9" width="700">
+</p>
+
+
+### Tercer insight
+
+La mayoría de los proyectos aún están en desarrollo o por iniciarse, por lo que existen oportunidades para optimizar los presupuestos. Se podrían realizar algunas reestructuraciones que permitan aumentar los costes en los proyectos, ya sea para beneficiar a la empresa o para contratar a especialistas que aporten un mayor valor a los proyectos.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/61c1c5c9-1baf-4b90-b481-2a92b972eaef" width="400">
+</p>
+
+
+
+### Cuarto insight
+
+En cuanto a la estructura de empleados, cada departamento cuenta con dos empleados. El departamento con el mayor coste en salarios es Sales, mientras que el de menor coste es IT, con una diferencia de apenas 9,6%. Esta variación se debe a que en Sales se encuentran un Data Scientist y un Sales Executive, mientras que en IT hay un IT Specialist y un Finance Analyst. No obstante, no se observa una disparidad significativa de salarios entre los empleados dentro de un mismo departamento.
+
+![image](https://github.com/user-attachments/assets/deb73c6b-76a2-4bac-89b5-c5745e78a66a)
 
 
