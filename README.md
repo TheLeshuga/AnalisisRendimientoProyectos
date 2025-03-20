@@ -15,7 +15,9 @@ El objetivo de este análisis es explorar las fuentes de datos públicos disponi
 
 Se crea la base de datos mediante New Database en Microsoft SQL Server para subir los archivos .csv. 
 
-![image](https://github.com/user-attachments/assets/58246cdb-3f57-4cac-8f23-92454afb7d83)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/58246cdb-3f57-4cac-8f23-92454afb7d83" width="590">
+</p>
 
 Se importan los 6 archivos Excel como archivos planos a la nueva base de datos.
 
@@ -75,7 +77,10 @@ JOIN project_status ON project_assignments.project_id = project_status.project_i
 
 Mediante la opción SQL Server, conectamos PowerBI con la BBDD y usando las opciones avanzadas añadimos la consulta previamente creada para empezar con una tabla con únicamente los datos necesarios para empezar a transformarlos.
 
-![image](https://github.com/user-attachments/assets/34fc09f4-5011-4c2b-8579-4d43d732cdc9)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/34fc09f4-5011-4c2b-8579-4d43d732cdc9" width="500">
+</p>
+
 
 
 ### Tranformación de datos en PowerBI
