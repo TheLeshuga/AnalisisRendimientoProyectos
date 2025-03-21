@@ -9,6 +9,15 @@ El objetivo de este análisis es explorar las fuentes de datos públicos disponi
 
 ## Conclusiones generales
 
+Después del análisis exhaustivo, hemos llegado a las siguientes conclusiones:
+
+- Hemos identificado que **ninguno de los departamentos excede el presupuesto**. Sin embargo, **todos ellos están rindiendo al menos un 33% por debajo de lo esperado**.
+- El **60,41% del total de presupuestos entre todos los departamentos en un año se está desaprovechando**. Existe una oportunidad interesante empezar reestructurando el departamento de Engineering, ya que es el que mayor presupuesto y excedente tiene, dando a entender que la empresa busca potenciar dicho sector. Se podrían **contratar nuevos empleados** para acelerar los proyectos, **revalorizar a los empleados del departamento** y/o **iniciar nuevos proyectos** para aumentar el valor de la empresa.
+- Todos los departamentos, excepto **Human Resources**, tienen proyectos pendientes de inicio. Estos representan el **64,04%** del total, lo que brinda a la empresa una oportunidad clave para aplicar las estrategias mencionadas anteriormente y optimizar el desarrollo de los proyectos.
+- **No existe una relación de presupuesto otorgado a cada departamento en base a salarios y proyectos**. Esto provoca que una parte significativa del presupuesto asignado para agotarse en un año permanezca sin utilizar. Por ello, una buena estrategia sería implementar un **sistema de distribución del presupuesto por departamento**, priorizando primero los **salarios** y luego los **proyectos pendientes de inicio**.
+- La **diferencia de salarios entre departamentos es mínima**, de un **9,6%** entre el de mayor salario y el que menos.
+
+
 ## Trabajo realizado
 
 ### Creación de una base de datos, carga y transformación de los datos
@@ -124,26 +133,26 @@ Tras la limpieza final de datos y la consulta nueva, se crea un dashboard usando
 
 ### Primer insight 
 
-Estudiando los valores de la tabla de cálculo de rendimiento, observamos que ninguno de los proyectos tiene el capital en rojo. Eso significa que tienen suficiente presupuesto (de un año) como para cubrir todos los proyectos. Destacamos que los proyectos del departamento Engineering, el cual solo tiene 2 proyectos, es el que más presupuesto sobrante tiene mientras que el de Human Resources, con 2 proyectos, es el que más cerca se quedó de gastar todo el presupuesto anual.
+Al analizar los valores de la tabla de cálculo de rendimiento, observamos que ningún proyecto presenta un capital en rojo, lo que indica que el presupuesto asignado para un año es suficiente para cubrir todos los proyectos y salarios. Cabe destacar que el departamento de Engineering, a pesar de contar con solo dos proyectos (60.000 y 50.000 de presupuesto), es el que tiene el mayor excedente de presupuesto (un 77,5%). En contraste, el departamento de Human Resources, también con dos proyectos (55.000 y 50.000 de presupuesto), es el que estuvo más cerca de agotar su presupuesto anual (un 33,75%).
 
-Al analizar la fila de totales, se observa que, de los 3.450.000 € asignados anualmente, 2.084.000 € quedarían sin utilizar, lo que representa un 60,41 % del presupuesto total destinado a los departamentos. Este excedente indica que, aunque no hay riesgo de pérdidas por costes elevados, una gran parte de los fondos asignados no se está aprovechando de manera óptima.
+Al analizar la fila de totales, se observa que, de los 3.450.000€ asignados anualmente, 2.084.000€ quedarían sin utilizar, lo que representa un 60,41% del presupuesto total destinado a los departamentos. Este excedente indica que, aunque no hay riesgo de pérdidas por costes elevados, una gran parte de los fondos asignados no se está aprovechando de manera óptima, están rindiendo por debajo de lo esperado.
 
-Además, los sueldos anuales representan solo un 23,07 % del presupuesto total, lo que sugiere una oportunidad para revalorizar a los empleados. Se podrían implementar bonificaciones o aumentos salariales para incentivar y motivar al equipo. Otra alternativa sería reequilibrar la contratación, ya sea incorporando nuevos empleados para acelerar el desarrollo de proyectos existentes o para iniciar nuevos proyectos que optimicen el uso del presupuesto disponible.
+Además, los sueldos anuales representan solo un 23,07% del presupuesto total, lo que sugiere una oportunidad para revalorizar a los empleados. Se podrían implementar bonificaciones o aumentos salariales para incentivar y motivar al equipo. Otra alternativa sería reequilibrar la contratación, ya sea incorporando nuevos empleados para acelerar el desarrollo de proyectos existentes o para iniciar nuevos proyectos que optimicen el uso del presupuesto disponible. Estas implementaciones podrían iniciar en el departamento de Engineering, el cual pareció ser de prioridad para la empresa por el gran presupuesto dado. 
 
 ![image](https://github.com/user-attachments/assets/d161ffa1-6664-4b41-8094-eef9e5226047)
 
 
 ### Segundo insight
 
-El departamento con el mayor presupuesto destinado a proyectos es Sales, que cuenta con dos proyectos. Además, es el departamento con el mayor coste anual en salarios, con dos empleados. A pesar de ello, ha inutilizado el 47,17 % de su presupuesto anual.
+El departamento con el mayor presupuesto destinado a proyectos es Sales, que cuenta con dos proyectos. Además, es el departamento con el mayor coste anual en salarios, con dos empleados. A pesar de ello, ha inutilizado el 47,17% de su presupuesto anual.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/14b4c29c-592b-409b-bf29-3e01860f55e5" width="700">
 </p>
 
-Por otro lado, el departamento que ha utilizado el menor presupuesto en proyectos es IT, también con dos proyectos y dos empleados. Aun así, su porcentaje de presupuesto no utilizado es 46,44 %, lo que indica una situación similar a la de Sales en términos de eficiencia en el uso de fondos. 
+Por otro lado, el departamento que ha utilizado el menor presupuesto en proyectos es IT, también con dos proyectos y dos empleados. Aun así, su porcentaje de presupuesto no utilizado es 46,44%, lo que indica una situación similar a la de Sales en términos de eficiencia en el uso de fondos. 
 
-Con este resultado podríamos decir que el presupuesto total otorgado a cada departamento no parece estar determinado ni por el número de empleados ni por un criterio basado en proyectos de mayor coste. Un dato que refuerza esta observación es que el departamento de Engineering recibió un presupuesto anual de 1.200.000 €, a pesar de que el coste de sus proyectos ocupa el tercer lugar entre los departamentos con mayor inversión en proyectos. Esto indica que la distribución del presupuesto no sigue un patrón estrictamente basado en el gasto en proyectos ni salarios. Por lo tanto, una acción recomendable sería ajustar el presupuesto en función de las variables de salarios y los proyectos futuros. De esta manera, podremos asignar los presupuestos de forma más estratégica, garantizando que cada departamento reciba los fondos necesarios para sus actividades, sin exceder la inversión disponible para otras áreas de la empresa.
+Con este resultado podríamos decir que el presupuesto total otorgado a cada departamento no parece estar determinado ni por el número de empleados ni por un criterio basado en proyectos de mayor coste. Un dato que refuerza esta observación es que el departamento de Engineering recibió un presupuesto anual de 1.200.000€, a pesar de que el coste de sus proyectos ocupa el tercer lugar entre los departamentos con mayor inversión en proyectos. Esto indica que la distribución del presupuesto no sigue un patrón estrictamente basado en el gasto en proyectos ni salarios. Por lo tanto, una acción recomendable sería ajustar el presupuesto en función de las variables de salarios y los proyectos futuros. De esta manera, podremos asignar los presupuestos de forma más estratégica, garantizando que cada departamento reciba los fondos necesarios para sus actividades, sin exceder la inversión disponible para otras áreas de la empresa.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/e4289e8f-c2bf-4098-b560-b8a9a41702b9" width="700">
@@ -152,7 +161,7 @@ Con este resultado podríamos decir que el presupuesto total otorgado a cada dep
 
 ### Tercer insight
 
-La mayoría de los proyectos aún están en desarrollo o por iniciarse, por lo que existen oportunidades para optimizar los presupuestos. Se podrían realizar algunas reestructuraciones que permitan aumentar los costes en los proyectos, ya sea para beneficiar a la empresa o para contratar a especialistas que aporten un mayor valor a los proyectos.
+El 64,04% de los proyectos aún están en desarrollo o por iniciarse, por lo que existen oportunidades para optimizar los presupuestos. Se podrían realizar algunas reestructuraciones que permitan aumentar los costes en los proyectos, ya sea para beneficiar a la empresa o para contratar a especialistas que aporten un mayor valor a los proyectos.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/61c1c5c9-1baf-4b90-b481-2a92b972eaef" width="400">
